@@ -6,6 +6,7 @@ import SkinToneContainer from './components/SkinToneContainer'
 import ImageContainer from './components/ImageContainer'
 import {connect} from 'react-redux'
 
+
 import {fetchLipsticks} from './actions/index.js'
 
 class App extends Component {

@@ -1,7 +1,9 @@
 const defaultState = {
    lipstickList: [],
    selectedLipstick: {},
-   selectedSkinTone: 'dark'
+   selectedSkinTone: 'dark',
+
+   
 }
 
 export default function beautyReducer (state = defaultState, action) {
