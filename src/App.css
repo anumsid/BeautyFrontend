@@ -1,0 +1,77 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+#flex-holder{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.lipstick_container {
+  width: 33%;
+}
+
+.image_container {
+  width: 33%;
+}
+
+.skintone_container {
+  width: 33%;
+}
+
+/* .card {
+  background-color: #eeeeee;
+  height: 250px;
+  width: 300px;
+  box-shadow: 10px 10px grey;
+  padding: 10px;
+  border-radius: 10px;
+} */
+
+.container {
+    width: 200px;
+    height: 120px;
+}
+
+/* resize images */
+.container img {
+    width: 100%;
+    height: 250px;
+}
+
+
+.imagescontainer {
+    width: 400px;
+    height: 100px;
+}
+
+/* resize images */
+.imagescontainer img {
+    width: 100%;
+    height: 180px;
+}
