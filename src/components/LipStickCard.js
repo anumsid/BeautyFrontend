@@ -1,53 +1,49 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {renderImage} from '../actions'
-
 
 class LipstickCard extends React.Component{
+    render(){
+      console.log(this.props);
+      return (
+        <div>
+          <div>
+            <button onClick={this.props.handleDetailClick}>Back</button>
+          </div>
 
+          <div>
+            <p>{this.props.selectedLipstick.description}</p>
+            <p>{this.props.selectedLipstick.price}</p>
 
-  handleClick = () => {
-    this.props.renderImage(this.props.lipstick)
+            {this.props.selectedLipstick.reviews === undefined ? null :
+              (<div>
+                {this.props.selectedLipstick.reviews.map(review => {
+                  return (
+                    <div>
+                      <h1>Product Reviews</h1>
+                      {review.content}
 
-  }
+                      {review.user_first}
 
-
-  render(){
-    console.log(this.props);
-    return(
-
-      <div class="container" onClick={this.handleClick}>
-        <div className="radio">
-          <label>
-            <input type="radio" name="tone" value="light" checked={this.props.selectedSkinTone === "light"}/>
-            {this.props.lipstick.title}
-          </label>
-        </div>
-        <img src={this.props.lipstick.imgURL} />
-        {this.props.lipstick.reviews === undefined ? null :
-          (<div>
-            {this.props.lipstick.reviews.map(review => {
-              return (
-                <div>
-                  {review.content}
-                  {review.user_first}
-                  {review.user_last}
-                </div>
-              )
-            })
+                      {review.user_last}
+                    </div>
+                  )
+                })
+              }
+            </div>)
           }
-        </div>)
 
-      }
+        </div>
       </div>
-    )
+      )
+    }
   }
-}
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    renderImage: (lipstick) => dispatch(renderImage(lipstick))
+
+  const mapStatetoProps = (state) => {
+    return {
+      selectedLipstick: state.selectedLipstick
+    }
   }
-}
 
-export default connect (null, mapDispatchToProps)(LipstickCard);
+
+export default connect(mapStatetoProps)(LipstickCard)

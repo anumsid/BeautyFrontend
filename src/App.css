@@ -55,7 +55,7 @@
 
 .container {
     width: 200px;
-    height: 120px;
+    height: 320px;
 }
 
 /* resize images */
@@ -75,3 +75,12 @@
     width: 100%;
     height: 180px;
 }
+
+.lipstick {
+  margin-top: 10px 0 10px 0;
+  float: right;
+}
+
+/* .radio_buttons {
+  float: left;
+} */

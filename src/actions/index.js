@@ -16,7 +16,7 @@ export const getLipsticks = (lipsticksArray) => {
 }
 
 export const changeSkinTone = (skintone) => {
-  console.log(skintone);
+  //console.log(skintone);
   return {
     type: CHANGE_SKINTONE,
     payload: skintone
