@@ -25,6 +25,9 @@ class LipstickContainer extends React.Component{
     if(!this.state.clicked) {
       return(
         <div>
+          <div>
+            <p>Select a shade!</p>
+          </div>
           {this.props.lipstickList.map(lipstick => {
             return <LipstickItem handleDetailClick={this.handleDetailClick} lipstick={lipstick} />
           })}

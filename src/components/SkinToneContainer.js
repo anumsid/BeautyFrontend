@@ -12,26 +12,29 @@ class SkinToneContainer extends React.Component{
     //console.log(this.props);
     return(
       <div className="container">
-  <div className="row">
+  <div className="row" id="skintonerow">
     <div className="col-sm-12">
+      <div>
+        <p>Select your skintone!</p>
+      </div>
 
       <form>
         <div className="radio">
           <label>
             <input onChange={this.handleChange} type="radio" name="tone" value="light" checked={this.props.selectedSkinTone === "light"}/>
-            Light
+            <h4 className="skinfonts">Light</h4>
           </label>
         </div>
         <div className="radio">
           <label>
             <input onChange={this.handleChange} type="radio" name= "tone" value="medium" checked={this.props.selectedSkinTone === "medium"} />
-            Medium
+            <h4 className="skinfonts">Medium</h4>
           </label>
         </div>
         <div className="radio">
           <label>
             <input onChange={this.handleChange} type="radio" name="tone" value="dark" checked={this.props.selectedSkinTone === "dark"} />
-            Dark
+            <h4 className="skinfonts">Dark</h4>
           </label>
         </div>
       </form>

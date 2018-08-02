@@ -20,7 +20,7 @@ class LipstickItem extends React.Component{
         <div className="radio">
           <label>
             <input className="radio_buttons" type="radio" name="tone" value="light"/>
-            {this.props.lipstick.title}
+            <h6 className="six">{this.props.lipstick.title}</h6>
           </label>
             <button onClick={() => this.props.handleDetailClick()}>View Details</button>
         </div>
