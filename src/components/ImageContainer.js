@@ -9,6 +9,7 @@ class ImageContainer extends React.Component{
     //console.log(this.props.selectedLipstick);
     //console.log(this.props.selectedLipstick[this.props.selectedSkinTone + "URL"])
     console.log(this.props.selectedLipstick)
+    console.log(this.props.selectedLipstick["medURL"])
 
 
 
@@ -16,8 +17,20 @@ class ImageContainer extends React.Component{
     return(
       <div className="imagescontainer">
         {/* {this.props.selectedLipstick.title} */}
-        {this.props.selectedSkinTone === "medium" ? <img src={this.props.selectedLipstick["medURL"]}/> :
-        <img src= {this.props.selectedLipstick[this.props.selectedSkinTone + "URL"]}/>}
+        {/* <img src="images/heart.jpeg"/> */}
+        {!!this.props.selectedLipstick["medURL"] ?
+          (this.props.selectedSkinTone === "medium" ? (
+              <img
+                src={this.props.selectedLipstick["medURL"]}
+              />
+            ) : (
+              <img
+                src={this.props.selectedLipstick[this.props.selectedSkinTone + "URL"]}
+              />
+            )
+          ) : null }
+
+
 
 
           <ReactPlayer
