@@ -48,9 +48,9 @@ class LipstickCard extends React.Component{
                 {this.props.selectedLipstick.reviews.map(review => {
                   return (
                     <div>
-                      <ol>
-                      <li>{review.content} - {review.user_first} {review.user_last} </li>
-                    </ol>
+                      <ul>
+                      <li> * {review.content} - {review.user_first} {review.user_last} </li>
+                    </ul>
                     </div>
                   )
                 })
