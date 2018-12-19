@@ -1,7 +1,6 @@
 import React from 'react'
 import LipstickItem from './LipStickItem'
 import {connect} from 'react-redux'
-import {handleClick} from './ImageContainer'
 import LipstickCard from './LipstickCard'
 
 class LipstickContainer extends React.Component{

@@ -14,7 +14,7 @@ class Header extends React.Component{
             <NavItem href="/">Home</NavItem>
             <NavItem href='/signup'>Sign Up</NavItem>
             <NavItem href='/login'>Login</NavItem>
-          {/* <NavItem href="/cart">Cart</NavItem> */}
+            <NavItem href="/cart">Cart</NavItem>
           </Navbar>
         </div>) : (  <div>
              <Navbar brand='SWATCH3R' center='true' className="nav brand-logo" right>
